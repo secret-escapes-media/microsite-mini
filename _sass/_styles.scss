@@ -14,42 +14,50 @@
 
 // ---------- Background images ----------
 
-.section--fixed-bg {
+.section--bg {
   padding-top: 8em;
   padding-bottom: 8em;
   color: $white;
   background-color: $se-light-grey;
-  background: $se-light-grey center no-repeat;
+  background-repeat: no-repeat;
+  background-image: url('../img/bg/banner-default.jpg');
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center top;
   p { font-weight: 400; }
-  .page-content &:first-child:before {
-    content: '';
-    display: block;
-    height: 3.375em;
+
+  &-fixed {
+    background-position: center;
+    background-attachment: fixed;
   }
 }
 
-.overview .intro        { background-image: url('../img/bg/bg-01.jpg'); }
-.overview .another      { background-image: url('../img/bg/bg-02.jpg'); }
-.example-page .intro    { background-image: url('../img/bg/bg-04.jpg'); }
-.example-page .another  { background-image: url('../img/bg/bg-03.jpg'); }
-.offers .intro          { background-image: url('../img/bg/bg-05.jpg'); }
-
-
-// ---------- button ----------
-
-.btn {
-  @include transition;
-  display:inline-block;
-  padding: .5em 1.5em;
-  border: 1px solid $se-orange;
-  font-weight: 500;
-  border-radius: 10em;
-  &:hover {
-    color: white;
-    background-color: $se-orange;
-    text-decoration: none;
+.banner {
+  &--hero {
+    padding-top: 12em;
+    padding-bottom: 12em;
+    &:before {
+      content: '';
+      display: block;
+      height: 115px;
+    }
   }
-  * + & { margin-top: 1em; }
 }
+
+// ---------- Box areas ----------
+
+.box {
+  position: relative;
+  padding: 3em 1.5em;
+  &--intro {
+    background-color: $mini-orange;
+  }
+  &--extrude { margin-top: -3em; }
+  &--category {
+    background-color: grey;
+    display: table;
+    height: 300px;
+    &--content { display: table-cell; height: 100%; vertical-align: middle; }
+  }
+}
+
+

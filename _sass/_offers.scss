@@ -2,7 +2,8 @@
 
 
 .offer {
-  background-color: $light-grey;
+  max-width: 760px;
+  padding-top: 2em;
   .row__column{
     margin-top: 0;
   }
@@ -10,37 +11,29 @@
 
 .offer__image {
   position: relative;
-  height: 18em;
+  z-index: 0;
+  display: block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   background-size: cover;
-  @include bp( large ) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: auto;
-  }
-}
-
-.offer__image-link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .offer__content {
-  padding: $margin ($margin * 1.2);
+  position: relative;
+  z-index: 1;
+  margin-top: -2em;
   p + p { margin-top: .2em; }
 }
 
+.offer__gallery {
+  &--item { margin-bottom: 1em; }
+}
+
 .offer__content-title {
-  margin-bottom: .482em;
-  font-size: 1.728em;
+  background-color: $light-grey;
+  padding: 1.5em;
+  margin-bottom: 1em;
 }
 
 .offer__content-subtitle {
@@ -65,6 +58,7 @@
 }
 
 .offer__content-price {
+  font-family: $title-font-family;
   font-weight: bold;
   font-size: 1.44em;
 }

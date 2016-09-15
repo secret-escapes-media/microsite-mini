@@ -1,36 +1,74 @@
 // site header and navigation styles
 
 
-// -------- Main navigation ( core site style ) --------
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $z-overlay-upper;
+}
+
+// -------- Main navigation --------
 
 .site-header {
   color: $white;
   font-family: $core-font-family;
-  background-color: $black;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  background-color: $black-75;
+  padding: 1.15em 0;
+  height: 70px;
+  overflow: hidden;
   text-align: center;
-  @include bp( large ) {
-    text-align: left;
+  @include bp( xlarge ) {
+    padding: .6em 2em;
+  }
+}
+
+.site-header__logo {
+  margin-right: 0;
+  padding: 0;
+  @include bp( xlarge ) {
+    float: left;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    margin-right: 15px;
+    padding: 0.8em 15px 0.8em 0;
+  }
+
+  img {
+    width: 220px;
+    @include bp( xlarge ) {
+      width: 175px;
+    }
+  }
+}
+
+.site-header__logo--partner {
+  display: none;
+  @include bp( xlarge ) {
+    display: block;
+    float: right;
+    width: auto;
+    padding: 0.3em 0;
+    height: 48px;
   }
 }
 
 .site-header__nav {
   position: fixed;
+  float: none;
   top: 0;
   left: -75%;
   z-index: $z-overlay-upper;
   width: 75%;
   height: 100%;
-  background-color: $se-dark-grey-85;
+  background-color: $black-75;
   transition: left $transition-time ease;
   text-align: left;
-  @include bp( large ) {
+  @include bp( xlarge ) {
     position: static;
+    float: left;
     width: auto;
     height: auto;
     padding: 0;
-    margin-top: 1em;
     background-color: transparent;
   }
   @include bp-vertical {
@@ -39,15 +77,15 @@
 }
 
 .site-header__nav-list {
-  border-bottom: 1px solid $black;
-  @include bp( large ) {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  @include bp( xlarge ) {
     border-bottom: 0;
   }
 }
 
 .site-header__nav-item {
-  border-top: 1px solid $black;
-  @include bp( large ) {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  @include bp( xlarge ) {
     display: inline-block;
     padding-right: 1em;
     border-top: 0;
@@ -64,45 +102,29 @@
   text-transform: uppercase;
   &:hover {
     color: $se-orange;
-    background-color: $se-dark-grey-85;
+    background-color: $black-85;
     text-decoration: none;
   }
   &--current { color: $se-orange; }
-  @include bp( large ) {
-    padding: 0;
+  @include bp( xlarge ) {
+    padding: 1.3em 0;
     font-size: .833em;
     &:hover { background-color: transparent; }
-  }
-}
-
-.site-header__logo {
-  width: 146px;
-  @include bp( medium ) {
-    width: 220px;
-  }
-}
-
-.site-header__logo--partner {
-  display: none;
-  @include bp( large ) {
-    display: block;
-    float: right;
-    width: 150px;
   }
 }
 
 
 // -------- Mobile navigation --------
 
-$icon-height: 20px;
+$icon-height: 21px;
 .mobile-icon {
   height: $icon-height;
   width: 25px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 20px;
+  background-size: auto $icon-height;
   cursor: pointer;
-  @include bp( large ) {
+  @include bp( xlarge ) {
     display: none;
   }
 }
@@ -121,6 +143,7 @@ $icon-height: 20px;
   margin: 1em;
   margin-top: 1.5em;
   background-image: url( "../img/icon/close.png" );
+  border-top: 0;
   .svg & { background-image: url( "../img/icon/close.svg" ); }
 }
 
@@ -134,7 +157,7 @@ $icon-height: 20px;
   padding-bottom: 1em;
   background-color: $black-5;
   text-align: center;
-  @include bp( large ) {
+  @include bp( xlarge ) {
     display: none;
   }
   @include bp-vertical {
@@ -146,7 +169,7 @@ $icon-height: 20px;
     vertical-align: middle;
     padding-top: .833em;
     padding-bottom: .833em;
-    @include bp( large ) {
+    @include bp( xlarge ) {
       display: none;
     }
   }
@@ -155,15 +178,11 @@ $icon-height: 20px;
 // -------- Microsite navigation --------
 
 .microsite-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: auto;
   z-index: $z-overlay;
   text-align: center;
-  background-color: $black-5;
+  background-color: white;
   overflow: hidden;
+  height: 45px;
 }
 
 .microsite-nav__list {
@@ -185,26 +204,25 @@ $icon-height: 20px;
   @include transition;
   display: inline-block;
   text-align: center;
-  color: $white;
   flex-grow: 1;
+  border-right: 1px solid $black-15;
+  margin: 6px 0;
+  &:last-child { border-right: 0; }
   &--current {
-    color: $se-orange;
-    background-color: $black-5;
+    color: $mini-blue;
   }
 }
 
 .microsite-nav__link {
-  transition: background-color $transition-time ease;
   display: block;
-  padding: 1.2em 1.44em;
+  padding: 0.5em 1.44em;
   font-size: .833em;
   text-transform: uppercase;
   letter-spacing: .1em;
   &:hover {
-    background-color: $black-85;
     text-decoration: none;
   }
   @include bp(large){
-    padding: 1.44em 1.2em;
+    padding: 0.5em 1.2em;
   }
 }

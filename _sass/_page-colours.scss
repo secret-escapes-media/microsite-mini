@@ -1,0 +1,61 @@
+// ---------- Page color themes ----------
+
+
+
+// Hatch :: mini-orange :: ed9300
+////////////////////////////////////
+body.city {
+
+  .color--theme { color: $mini-orange; }
+  .microsite-nav__item--current { color: $mini-orange; }
+  .box--intro { background-color: $mini-orange; }
+  .btn { background-color: $mini-orange;
+    &:hover { background-color: darken( $mini-orange, 10% ); }
+  }
+  .content--light-color {
+    .btn { color: $mini-orange;
+      &:hover { color: darken( $mini-orange, 10% ); }
+    }
+  }
+}
+
+
+
+// Countryman :: mini-grey :: 89887e
+////////////////////////////////////
+body.country {
+  // Countryman :: mini-grey :: 89887e
+
+  .color--theme { color: $mini-grey; }
+  .microsite-nav__item--current { color: $mini-grey; }
+  .box--intro { background-color: $mini-grey; }
+  .btn { background-color: $mini-grey;
+    &:hover { background-color: darken( $mini-grey, 10% ); }
+  }
+  .content--light-color {
+    .btn { color: $mini-grey;
+      &:hover { color: darken( $mini-grey, 10% ); }
+    }
+  }
+}
+
+
+
+// Clubman :: mini-burgundy :: 3d0016
+////////////////////////////////////
+body.boutique {
+
+  .color--theme { color: $mini-burgundy; }
+  .microsite-nav__item--current { color: $mini-burgundy; }
+  .box--intro { background-color: $mini-burgundy; }
+  .btn { background-color: $mini-burgundy;
+    &:hover { background-color: darken( $mini-burgundy, 10% ); }
+  }
+  .content--light-color {
+    .btn { color: $mini-burgundy;
+      &:hover { color: darken( $mini-burgundy, 10% ); }
+    }
+  }
+}
+
+

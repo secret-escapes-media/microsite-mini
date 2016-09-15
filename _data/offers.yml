@@ -1,26 +1,44 @@
   - title: An offer
-    category: category-1
+    category: boutique
     class: a-third-offer
     location: Region, Country
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
+    description: >
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.<p>
+      <ul>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      </ul>
     price: 999999
     price-description: per room per night
     link: #
 
   - title: Another offer
-    category: category-2
+    category: city
     class: another-offer
     location: Region, Country
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
+    description: >
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.<p>
+      <ul>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      </ul>
     price: 999999
     price-description: per room per night
     link: #
 
   - title: A third offer
-    category: category-3
+    category: country
     class: a-third-offer
     location: Region, Country
-    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.
+    description: >
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure architecto eum exercitationem neque.<p>
+      <ul>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+      </ul> neque.
     price: 999999
     price-description: per room per night
     link: #

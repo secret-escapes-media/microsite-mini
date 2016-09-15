@@ -7,19 +7,24 @@ $white:       #fff;
 $black:       #000;
 $light-grey:  #f2f2f2;
 
+$white-1:    rgba(255,255,255,.1);
+$white-15:    rgba(255,255,255,.15);
 $white-25:    rgba(255,255,255,.25);
 $white-33:    rgba(255,255,255,.33);
 $white-5:     rgba(255,255,255,.5);
 $white-66:    rgba(255,255,255,.66);
 $white-75:    rgba(255,255,255,.75);
 $white-85:    rgba(255,255,255,.85);
+$black-1:    rgba(0,0,0,.1);
+$black-15:    rgba(0,0,0,.15);
 $black-25:    rgba(0,0,0,.25);
 $black-33:    rgba(0,0,0,.33);
 $black-5:     rgba(0,0,0,.5);
 $black-66:    rgba(0,0,0,.66);
 $black-75:    rgba(0,0,0,.75);
 $black-85:    rgba(0,0,0,.85);
-$text-black:  #0d0d0d;
+$text:  #7e7e7e;
+$text-headings:  #3e3e3e;
 
 $se-orange:       #ff8c00;
 $se-orange-20:    rgba(255,140,0,.20);
@@ -30,6 +35,15 @@ $se-dark-grey:    #292728;
 $se-dark-grey-33: rgba(41,39,40,.33);
 $se-dark-grey-5:  rgba(41,39,40,.5);
 $se-dark-grey-85: rgba(41,39,40,.85);
+
+$mini-blue:        #0085ac;
+$mini-orange:      #ed9300;
+$mini-hatch:       #ed9300;
+$mini-grey:        #89887e;
+$mini-countryman:  #89887e;
+$mini-burgundy:    #3d0016;
+$mini-clubman:     #3d0016;
+$mini-green:       #00200b;
 
 
 // -------- breakpoints --------
@@ -120,6 +134,7 @@ $transition-time: .25s;
     clear: both;
   }
 }
+.clearfix { @include clearfix; }
 
 
 // -------- accessible hiding --------

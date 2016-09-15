@@ -4,15 +4,17 @@
 // -------- root typography styles --------
 
 $core-font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
-$main-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$title-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+
+$title-font-family: 'Mini', 'Helvetica Neue', sans-serif;
+$main-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+$mini-sans-font-family: 'Mini Sans', 'Helvetica Neue', sans-serif;
 
 html { font-size:62.5%; }
 body,
 input, textarea, keygen, select, button {
   font: 400 14px/1.728 $main-font-family;
-  letter-spacing: -.015em;
   -webkit-text-size-adjust: 100%;
+  color: $text;
   @include bp( large ) {
     font-size: 15px;
   }
@@ -27,13 +29,15 @@ h3, .h3,
 h4, .h4,
 h5, .h5 {
   font-family: $title-font-family;
+  color: $text-headings;
 }
 
 h1, .h1 {
   line-height: 1.05;
   margin-bottom: .2em;
-  letter-spacing: -.015em;
+  letter-spacing: 0.3em;
   font-size: 3.375em;
+  text-transform: uppercase;
   @include bp( medium ) {
     font-size: 4em;
   }
@@ -43,9 +47,11 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  line-height: 1.25;
   margin-bottom: .5em;
-  font-size: 2em;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.25;
   @include bp( medium ) {
     font-size: 2.488em;
   }
@@ -55,8 +61,10 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  margin-bottom: .5em;
+  margin-bottom: .2em;
   font-size: 1.728em;
+  font-weight: 700;
+  line-height: 1;
   @include bp( medium ) {
     font-size: 2.074em;
   }
@@ -66,18 +74,68 @@ h3, .h3 {
 }
 
 h4, .h4 { font-size: 1.728em; }
+h5, .h5 { font-size: 1.2em; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.1em; }
+h6, .h6 { font-size: 1em; text-transform: uppercase; }
 
 
 // -------- general content styles --------
 
 .page-content {
+  p             { max-width: $large; }
   p + *         { margin-top: 1em; }
   li            { list-style-position: inside; }
   ul li         { list-style-type: disc; }
   ol li         { list-style-type: decimal; }
   em            { font-style: italic; }
   strong        { font-weight: 600; }
+  // Text classes
+  .lead         { font-size: 1.45em; line-height: 1.45; font-family: $title-font-family; }
+  // Alignment
   .align-left   { text-align: left; }
   .align-right  { text-align: right; }
-  .align-center { text-align: center; }
+  .align-center {
+    text-align: center;
+    p { margin-left: auto; margin-right: auto;}
+  }
+  // Horizontal rules
+  hr {
+    border: 0; height: 3px; background-color: $mini-grey; margin: 2em auto;
+    &.center {
+      width: 60px;
+    }
+  }
 }
+
+// Make contents of an area invert for display against dark backgrounds
+.content--light-color {
+  color: white;
+  hr { background-color: white; }
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5 { color: white; }
+  .btn { background-color: white !important; color: $mini-blue;
+    &:hover { background-color: white !important; color: darken($mini-blue, 10%); }
+  }
+}
+
+
+// ---------- button ----------
+
+.btn {
+  @include transition;
+  display:inline-block;
+  padding: .5em 1.5em;
+  color: white;
+  background-color: $mini-blue;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($mini-blue, 10%);
+    text-decoration: none;
+  }
+  * + & { margin-top: 1em; }
+}
+

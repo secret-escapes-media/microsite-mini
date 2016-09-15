@@ -1,0 +1,41 @@
+---
+layout: default
+page-type: offers
+title: City Experiences
+class: city
+nav-order: 2
+
+banner-title:
+banner-content:
+
+intro:
+---
+
+
+{% include banner.html %}
+
+
+<div class="row row--padding">
+  <div class="box box--intro box--extrude align-center content--light-color">
+    <h2>Curated get-aways</h2>
+    <hr class="center" />
+    <p class="lead">Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
+    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <a href="#" class="btn">View offers</a>
+  </div>
+</div>
+
+<section>
+  <div class="row row--padding align-center">
+    <h2>{{ page.title }}</h2>
+    <p class="lead">Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue.</p>
+    <hr class="center">
+  </div>
+
+  <div class="row row--padding">
+    {% assign offers = site.data.offers | where: "category", page.class %}
+    {% for offer in offers %}
+        {% include offer-block.html %}
+    {% endfor %}
+  </div>
+</section>

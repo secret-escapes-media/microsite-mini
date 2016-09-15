@@ -1,0 +1,35 @@
+// @font-face integrations
+
+@font-face {
+   font-family: 'Mini';
+      src: url('../fonts/mini-serif-regular.eot');
+      src: url('../fonts/mini-serif-regular.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/mini-serif-regular.woff') format('woff'),
+           url('../fonts/mini-serif-regular.ttf') format('truetype'),
+           url('../fonts/mini-serif-regular.svg#Mini') format('svg');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Mini';
+      src: url('../fonts/mini-serif-bold.eot');
+      src: url('../fonts/mini-serif-bold.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/mini-serif-bold.woff') format('woff'),
+           url('../fonts/mini-serif-bold.ttf') format('truetype'),
+           url('../fonts/mini-serif-bold.svg#MiniBold') format('svg');
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Mini Sans';
+      src: url('../fonts/mini_sans-regular.eot');
+      src: url('../fonts/mini_sans-regular.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/mini_sans-regular.woff2') format('woff2'),
+           url('../fonts/mini_sans-regular.woff') format('woff'),
+           url('../fonts/mini_sans-regular.ttf') format('truetype'),
+           url('../fonts/mini_sans-regular.svg#MiniSans') format('svg');
+   font-weight: 400;
+   font-style: normal;
+}
