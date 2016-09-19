@@ -171,6 +171,7 @@ $z-background:      -1;
     width: 100%;
   }
 }
+a.bg-image-ratio { display: block; }
 .bg-image-ratio--1-1:before   { padding-top: 100%; }
 .bg-image-ratio--4-3:before   { padding-top: 75%; }
 .bg-image-ratio--3-2:before   { padding-top: 66.666666666667%; }

@@ -84,5 +84,45 @@
   });
 
 
+///////////////////////////////////////
+//      Modal
+///////////////////////////////////////
+
+  var modal         = $('.js-modal'),
+      modalContent  = $('.js-modal__content'),
+      modalClose    = $('.js-modal__close'),
+      modalVideo    = $('.js-modal__video');
+
+  // EVENT - launch modal & populate with content
+  $('.js-launch-modal').on('click', function(e) {
+
+    e.preventDefault();
+
+    // launch modal
+    modal.removeClass('is-closed').addClass('is-open').fadeIn();
+    $('body').css('overflow', 'hidden');
+
+  });
+
+
+  function closeModal(e) {
+    e.on('click', function() {
+      modal.removeClass('is-open').addClass('is-closed').fadeOut();
+      $('body').css('overflow', 'auto');
+    });
+  }
+
+  $(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+       modal.removeClass('is-open').addClass('is-closed').fadeOut();
+       $('body').css('overflow', 'auto');
+      }
+  });
+
+  // close modal on icon and bg click
+  closeModal(modalClose);
+  // closeModal(modal);
+
+
 ///////////////////////////////////////////////////////////////////////////////
 });})(jQuery, this); // on ready end

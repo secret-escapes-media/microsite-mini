@@ -2,7 +2,7 @@
 layout: default
 title: "#MINIBreaks"
 class: minibreaks
-nav-order: 6
+nav-order: 5
 
 banner-title:
 banner-content:
@@ -13,15 +13,33 @@ intro:
 
 {% include banner.html %}
 
-<section>
-  <div class="row row--padding row--columns-4-4-4-gutters">
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
-    <p class="row__column">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae harum quasi magni veniam eos laborum velit, provident laboriosam, distinctio laudantium voluptas natus sapiente nobis, amet. Maiores, quo eum iste quisquam!</p>
+
+<div class="row row--padding">
+  <div class="box box--intro align-center content--light-color">
+      <h2>Find out what people love most about MINI.</h2>
+      <hr class="center" />
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ipsum non quibusdam eos recusandae modi laboriosam culpa rem.</p>
   </div>
-  <div class="row row--padding">
-    <a href="#" class="btn">button</a>
+</div>
+
+
+<section>
+
+
+  <div class="row row--padding row--columns-4-4-4 row--columns-4-4-4-gutters">
+    {% assign feedbacks = site.data.customers %}
+    {% for feedback in feedbacks %}
+      <div class="row__column box box--grey-bg">
+        <a href="#" class="bg-image-ratio bg-image-ratio--1-1" style="background-image: url('{{site.baseurl}}/img/content/ig{{forloop.index}}.jpg');"></a>
+        <div class="box--content">
+          <p>{{feedback.description}}</p>
+          <a href="#"><h6>- {{feedback.author}}</h6></a>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
+
+{% include test-drive.html %}
 

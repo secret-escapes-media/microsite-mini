@@ -30,10 +30,11 @@
   &--item { margin-bottom: 1em; }
 }
 
-.offer__content-title {
-  background-color: $light-grey;
-  padding: 1.5em;
+.offer__title {
+  background-color: white;
   margin-bottom: 1em;
+  &--content { padding: 1.5em 1.5em 1em; }
+  &--link { width: 100%; padding: 0.4em 1.5em; margin: 0; }
 }
 
 .offer__content-subtitle {
@@ -44,8 +45,8 @@
     content: "";
     display: inline-block;
     height: 1em;
-    width: .833em;
-    margin-right: .482em;
+    width: .66em;
+    margin-right: .4em;
     margin-bottom: .2em;
     vertical-align: bottom;
     background-image: url( "../img/icon/map-pin.png" );

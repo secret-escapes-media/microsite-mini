@@ -36,13 +36,13 @@ h1, .h1 {
   line-height: 1.05;
   margin-bottom: .2em;
   letter-spacing: 0.3em;
-  font-size: 3.375em;
+  font-size: 2.6em;
   text-transform: uppercase;
   @include bp( medium ) {
-    font-size: 4em;
+    font-size: 3.6em;
   }
   @include bp( large ) {
-    font-size: 5.063em;
+    font-size: 4.6em;
   }
 }
 
@@ -62,20 +62,20 @@ h2, .h2 {
 
 h3, .h3 {
   margin-bottom: .2em;
-  font-size: 1.728em;
+  font-size: 1.5em;
   font-weight: 700;
   line-height: 1;
   @include bp( medium ) {
-    font-size: 2.074em;
+    font-size: 1.728em;
   }
   @include bp( large ) {
-    font-size: 2.488em;
+    font-size: 2.074em;
   }
 }
 
-h4, .h4 { font-size: 1.728em; }
+h4, .h4 { font-size: 1.728em; line-height: 1; }
 h5, .h5 { font-size: 1.2em; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.1em; }
-h6, .h6 { font-size: 1em; text-transform: uppercase; }
+h6, .h6 { font-size: 0.9em; text-transform: uppercase; font-weight: 600; }
 
 
 // -------- general content styles --------
@@ -90,6 +90,7 @@ h6, .h6 { font-size: 1em; text-transform: uppercase; }
   strong        { font-weight: 600; }
   // Text classes
   .lead         { font-size: 1.45em; line-height: 1.45; font-family: $title-font-family; }
+  .text-nm   { margin: 0; }
   // Alignment
   .align-left   { text-align: left; }
   .align-right  { text-align: right; }
@@ -137,5 +138,14 @@ h6, .h6 { font-size: 1em; text-transform: uppercase; }
     text-decoration: none;
   }
   * + & { margin-top: 1em; }
+  &--hollow {
+    background-color: transparent;
+    border: 1px solid white;
+    &:hover { background-color: white; }
+  }
+  &--large {
+    border-bottom: 3px solid white;
+    padding-bottom: 0.3em;
+  }
 }
 

@@ -7,6 +7,7 @@
 body.city {
 
   .color--theme { color: $mini-orange; }
+  .background-color--theme { background-color: $mini-orange; }
   .microsite-nav__item--current { color: $mini-orange; }
   .box--intro { background-color: $mini-orange; }
   .btn { background-color: $mini-orange;
@@ -27,6 +28,7 @@ body.country {
   // Countryman :: mini-grey :: 89887e
 
   .color--theme { color: $mini-grey; }
+  .background-color--theme { background-color: $mini-grey; }
   .microsite-nav__item--current { color: $mini-grey; }
   .box--intro { background-color: $mini-grey; }
   .btn { background-color: $mini-grey;
@@ -46,6 +48,7 @@ body.country {
 body.boutique {
 
   .color--theme { color: $mini-burgundy; }
+  .background-color--theme { background-color: $mini-burgundy; }
   .microsite-nav__item--current { color: $mini-burgundy; }
   .box--intro { background-color: $mini-burgundy; }
   .btn { background-color: $mini-burgundy;

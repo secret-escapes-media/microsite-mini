@@ -1,0 +1,66 @@
+
+
+<div class="row row--padding">
+  <div class="box box--intro align-center content--light-color">
+    <h2>Curated get-aways</h2>
+    <hr class="center" />
+    <p class="lead">Book a Secret Escapes holiday and you can drive a MINI {{page.model}} for your trip!</p>
+    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <a href="#offers" class="btn">View {{page.title}}</a>
+  </div>
+</div>
+
+
+
+<section>
+
+  <div class="row row--padding">
+    <h2>MINI {{page.model}}</h2>
+  </div>
+
+  <div class="row row--padding row--columns-3-3-3-3 row--columns-3-3-3-3-gutters">
+    <a href="#" class="row__column bg-image-ratio bg-image-ratio--1-1"
+      style="background-image:url('{{site.baseurl}}/img/content/mini_city--feature1.jpg');">
+    </a>
+    <a href="#" class="row__column bg-image-ratio bg-image-ratio--1-1"
+      style="background-image:url('{{site.baseurl}}/img/content/mini_city--feature2.jpg');">
+    </a>
+    <a href="#" class="row__column bg-image-ratio bg-image-ratio--1-1"
+      style="background-image:url('{{site.baseurl}}/img/content/mini_city--feature3.jpg');">
+    </a>
+    <a href="#" class="row__column bg-image-ratio bg-image-ratio--1-1"
+      style="background-image:url('{{site.baseurl}}/img/content/mini_city--feature1.jpg');">
+    </a>
+  </div>
+
+  <div class="row row--padding row--columns-3-9">
+    <div class="row__column"></div>
+    <div class="row__column">
+      <p class="lead">Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue.</p>
+      <p>Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section--grey-bg" id="offers">
+  <div class="row row--padding align-center">
+    <h2>{{ page.title }}</h2>
+  </div>
+
+  <div class="row row--padding">
+    {% assign offers = site.data.offers | where: "category", page.class %}
+    {% for offer in offers %}
+        {% include offer-block.html %}
+    {% endfor %}
+  </div>
+</section>
+
+
+
+<section class="section--bg content--light-color" style="background-image: url('{{site.baseurl}}/img/bg/banner-viewall.jpg');">
+  <div class="row row--padding align-center">
+    <a href="#" class="text-nm h4 btn btn--large">View all {{page.title}} here</a>
+  </div>
+</section>

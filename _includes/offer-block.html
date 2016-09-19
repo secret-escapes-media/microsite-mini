@@ -17,19 +17,21 @@
 
     <div class="row__column offer__details">
 
-      <div class="offer__content-title">
-        <h3>
-          <a id="title-link-{{ offer.class }}" href="{{ offer.link }}">{{ offer.title }}</a>
-        </h3>
-        <p class="h6">
-          FROM
-          <span class="offer__content-price color--theme">£{{ offer.price }}</span>
-          {{ offer.price-description | upcase }}
-        </p>
-        <a id="button-link-{{ offer.class }}" href="{{ offer.link }}" class="btn">View Offer</a>
+      <div class="offer__title">
+        <div class="offer__title--content">
+          <h3>
+            <a id="title-link-{{ offer.class }}" href="{{ offer.link }}">{{ offer.title }}</a>
+          </h3>
+          <p class="offer__content-subtitle text-nm">{{ offer.location }}</p>
+          <p class="h6">
+            FROM
+            <span class="offer__content-price color--theme">£{{ offer.price }}</span>
+            {{ offer.price-description | upcase }}
+          </p>
+        </div>
+        <a class="btn offer__title--link" id="button-link-{{ offer.class }}" href="{{ offer.link }}">View Offer</a>
       </div>
 
-      <h4 class="offer__content-subtitle">{{ offer.location }}</h4>
       {{ offer.description }}
 
     </div>

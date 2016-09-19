@@ -1,0 +1,30 @@
+<div class="banner banner--hero banner--{{page.class}} content--light-color" style=" background-image: url('{{site.baseurl}}/img/bg/banner-{{page.class}}.jpg'); background-color: #{{page.banner-color}};">
+  <div class="banner--content row row--padding">
+
+    <div class="banner--title">
+      <h1>
+        {% if page.banner-title %}
+          {{page.banner-title}}
+        {% else %}
+          {{page.title}}
+        {% endif %}
+      </h1>
+      {{page.banner-content}}
+    </div>
+    {% if page.model %}
+    <div class="banner--subtitle">
+      <span class="color--theme h4 model--title">MINI {{page.model}}</span>
+    </div>
+    {% endif %}
+
+  </div>
+
+  <div class="banner--model">
+    <img src="{{site.baseurl}}/img/bg/banner-{{page.class}}--model.png" width="100%">
+  </div>
+
+  <div class="banner--background">
+    <img src="{{site.baseurl}}/img/bg/banner-{{page.class}}.jpg" width="100%">
+  </div>
+
+</div>

@@ -15,8 +15,6 @@
 // ---------- Background images ----------
 
 .section--bg {
-  padding-top: 8em;
-  padding-bottom: 8em;
   color: $white;
   background-color: $se-light-grey;
   background-repeat: no-repeat;
@@ -31,15 +29,11 @@
   }
 }
 
-.banner {
-  &--hero {
-    padding-top: 12em;
-    padding-bottom: 12em;
-    &:before {
-      content: '';
-      display: block;
-      height: 115px;
-    }
+.section--6-6 {
+  padding: 0;
+  &__image {  }
+  &__copy {
+    padding: 2em 5em;
   }
 }
 
@@ -47,17 +41,245 @@
 
 .box {
   position: relative;
-  padding: 3em 1.5em;
+  margin-bottom: 1.5em;
   &--intro {
-    background-color: $mini-orange;
+    padding: 3em 1.5em;
+    margin-top: -3em;
+    background-color: $mini-blue;
   }
-  &--extrude { margin-top: -3em; }
   &--category {
     background-color: grey;
-    display: table;
-    height: 300px;
-    &--content { display: table-cell; height: 100%; vertical-align: middle; }
+    background-size: cover;
+    margin-top: 0; margin-bottom: 0;
+    padding-top: 6em; padding-bottom: 6em;
+    &--content { &:hover { text-decoration: none; } }
+    & + & { margin-top: 0; }
+  }
+  &--content { padding: 1em 1.5em; }
+  &--grey-bg {
+    background-color: #f2f2f2;
   }
 }
 
+
+// ---------- MINI banners ----------
+
+.banner {
+  color: $white;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: $se-light-grey;
+  background-repeat: no-repeat;
+  background-image: url('../img/bg/banner-default.jpg');
+  background-size: cover;
+  background-position: center top;
+  p { font-weight: 400; }
+  &:before {
+    content: '';
+    display: block;
+    height: 115px;
+  }
+  &--content {
+    position: relative;
+    z-index: 1;
+    padding-top: 12em;
+    padding-bottom: 12em;
+  }
+}
+.banner--hero {
+  @include bp( large ) {
+    background-image: none !important;
+  }
+  // Text content of banner
+  .banner--content {
+    position: relative;
+    z-index: 1;
+    padding-top: 2em;
+    padding-bottom: 20em;
+    @include bp( medium ) {
+      padding-top: 6em;
+      padding-bottom: 18em;
+    }
+    @include bp( large ) {
+      padding-top: 8em;
+      padding-bottom: 24em;
+    }
+
+    .banner--title {
+      padding: 1em 1.5em 0.5em;
+      background-color: $black-75;
+      h1 { margin: 0; }
+    }
+    .banner--subtitle {
+      padding: 0.8em 1.5em 0.5em;
+      background-color: white;
+      .model--title {
+        margin-bottom: 0;
+        font-weight: 300;
+        font-family: $main-font-family;
+        line-height: 1;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // MINI car model
+  .banner--model {
+    position: absolute; z-index: 2; left: 50%;
+    display: none; pointer-events: none;
+    @include bp( medium ) {
+      display: block;
+    }
+  }
+
+  // Background for MINI car
+  .banner--background {
+    position: absolute; z-index: 0; top: 0; left: 50%;
+    display: none; pointer-events: none;
+    @include bp( medium ) {
+      display: block;
+    }
+  }
+}
+
+// OVERVIEW PAGE
+.banner--overview {
+  @include bp( xlarge ) {
+    background-image: none !important;
+  }
+  .banner--content {
+    padding-top: 6em; padding-bottom: 6em;
+    h1 { text-align: center; }
+    .banner--title { background-color: transparent; }
+    @include bp( medium ) {
+      padding-top: 4em; padding-bottom: 10em;
+      h1 { font-size: 2.8em; }
+      .banner--title { padding-bottom: 4em; }
+    }
+    @include bp( large ) {
+      padding-top: 5em; padding-bottom: 13em;
+      h1 { font-size: 3.6em; }
+    }
+    @include bp( xlarge ) {
+      padding-top: 2em; padding-bottom: 10em;
+      h1 { font-size: 4.1em; }
+      .banner--title { background-color: $black-75; }
+    }
+    @include bp( xxlarge ) {
+      padding-top: 9em; padding-bottom: 15em;
+      h1 { font-size: 4.6em; }
+      .banner--title { padding-bottom: 4em; background-color: $black-75; }
+    }
+  }
+  .banner--model {
+    @include bp( medium ) {
+      display: none;
+    }
+    @include bp( large ) {
+      display: none;
+    }
+    @include bp( xlarge ) {
+      display: block;
+      width: 943px;
+      top: 291px; margin-left: -462px;
+    }
+    @include bp( xxlarge ) {
+      display: block;
+      width: 1286px;
+      top: 396px; margin-left: -657px;
+    }
+  }
+  .banner--background {
+    @include bp( medium ) {
+      display: none;
+    }
+    @include bp( large ) {
+      display: none;
+    }
+    @include bp( xlarge ) {
+      display: block;
+      width: 1100px;
+      margin-left: -530px;
+    }
+    @include bp( xxlarge ) {
+      display: block;
+      width: 1500px;
+      margin-left: -750px;
+    }
+  }
+}
+
+// CITY PAGE
+.banner--city {
+  .banner--model {
+    @include bp( medium ) {
+      width: 450px;
+      top: 280px; margin-left: -190px;
+    }
+    @include bp( large ) {
+      width: 600px;
+      top: 373px; margin-left: -254px;
+    }
+  }
+  .banner--background {
+    @include bp( medium ) {
+      width: 1500px;
+      margin-left: -750px;
+    }
+    @include bp( large ) {
+      width: 2000px;
+      margin-left: -1000px;
+    }
+  }
+}
+
+// COUNTRY PAGE
+.banner--country {
+  .banner--model {
+    @include bp( medium ) {
+      width: 460px;
+      top: 319px; margin-left: -60px;
+    }
+    @include bp( large ) {
+      width: 600px;
+      top: 406px; margin-left: -184px;
+    }
+  }
+  .banner--background {
+    @include bp( medium ) {
+      width: 1550px;
+      margin-left: -650px;
+    }
+    @include bp( large ) {
+      width: 2000px;
+      margin-left: -940px;
+    }
+  }
+}
+
+// BOUTIQUE PAGE
+.banner--boutique {
+  .banner--model {
+    @include bp( medium ) {
+      width: 490px;
+      top: 311px; margin-left: -94px;
+    }
+    @include bp( large ) {
+      width: 620px;
+      top: 422px; margin-left: -214px;
+    }
+  }
+  .banner--background {
+    @include bp( medium ) {
+      width: 1510px;
+      margin-left: -680px;
+    }
+    @include bp( large ) {
+      width: 2000px;
+      margin-left: -1000px;
+    }
+  }
+}
 

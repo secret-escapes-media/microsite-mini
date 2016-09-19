@@ -4,19 +4,20 @@ title: Overview
 class: overview
 nav-order: 1
 
-banner-title: Start your MINI escape
+banner-title: Start your<br />MINI escape
 banner-content:
+banner-color: 5e6060
 
 intro:
 ---
 
 
-{% include banner.html %}
+{% include banner-hero.html %}
 
 
-<div class="row--padding row--columns-4-4-4 row--columns-4-4-4-gutters clearfix box--extrude align-center">
+<div class="row--columns-4-4-4 clearfix align-center">
 
-  {% assign categories = site.pages | where: "page-type", "offers" %}
+  {% assign categories = site.pages | sort:"nav-order" | where: "page-type", "offers" %}
   {% for category in categories %}
     <div class="row__column box box--category content--light-color " style="background-image: url({{site.baseurl}}/img/bg/tile-{{category.class}}.jpg);">
       <a href="{{category.url}}" class="box--category--content">
@@ -27,4 +28,4 @@ intro:
 
 </div>
 
-
+{% include test-drive.html %}

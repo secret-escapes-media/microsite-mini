@@ -1,12 +1,17 @@
-<section class="section--bg banner--hero banner content--light-color" style="background-image: url({{site.baseurl}}/img/bg/banner-{{page.class}}.jpg);">
-  <div class="row row--padding">
-    <h1>
-    {% if page.banner-title %}
-      {{page.banner-title}}
-    {% else %}
-      {{page.title}}
-    {% endif %}
-    </h1>
-    {{page.banner-content}}
+<div class="banner banner--{{page.class}} content--light-color" style="background-image: url({{site.baseurl}}/img/bg/banner-{{page.class}}.jpg);">
+  <div class="banner--content row row--padding">
+
+    <div class="banner--title">
+      <h1>
+        {% if page.banner-title %}
+          {{page.banner-title}}
+        {% else %}
+          {{page.title}}
+        {% endif %}
+      </h1>
+      {{page.banner-content}}
+    </div>
+
   </div>
-</section>
+
+</div>
