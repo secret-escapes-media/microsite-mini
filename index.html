@@ -20,7 +20,7 @@ intro:
   {% assign categories = site.pages | sort:"nav-order" | where: "page-type", "offers" %}
   {% for category in categories %}
     <div class="row__column box box--category content--light-color " style="background-image: url({{site.baseurl}}/img/bg/tile-{{category.class}}.jpg);">
-      <a href="{{category.url}}" class="box--category--content">
+      <a href="{{site.baseurl}}{{category.url}}" class="box--category--content">
         <h2>{{category.title}}</h2>
       </a>
     </div>

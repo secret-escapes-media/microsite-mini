@@ -19,7 +19,7 @@ gulp.task('serve', function () {
       server: {
         baseDir: '_site/',
         routes: {
-          '/mini': '_site/'
+          '/mini-2016': '_site/'
         }
       }
     });
